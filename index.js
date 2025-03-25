@@ -2,7 +2,7 @@ const express = require("express"); //Requiriendo express
 const app = express(); //Creando app con constructor express
 const port = 3005; //puerto:usualmente es por el orden del 3000
 //obteniendo de la aplicación la ruta y un creando callback
-//conmensaje indicando mi servidir
+//conmensaje indicando mi servidor
 app.get("/", (req, res) => {
   //Parámetro 1 es la ruta, el 2 un callback
   res.send("Este Es El Server De Danier");
