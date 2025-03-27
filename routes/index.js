@@ -1,6 +1,6 @@
-const productsRouter=require('./products.router')
-const usersRouter=require('./users.router')
-const cateRouter=require('./categories.router')
+const productsRouter=require('./products.router.js')
+const usersRouter=require('./users.router.js')
+const cateRouter=require('./categories.router.js')
 
 const routerApi=(app)=>{
   app.use('/products',productsRouter)
@@ -8,4 +8,4 @@ const routerApi=(app)=>{
   app.use('/categories',cateRouter)
 }
 
-module.exports=routerApi
+module.exports = routerApi

@@ -1,6 +1,6 @@
 const express = require("express"); //Requiriendo express
-const {router} = express.Router();
-router.get("/categories", (req, res) => {
+const router = express.Router();
+router.get("/", (req, res) => {
   //Parámetro 1 es la ruta, el 2 un callback
   res.json([
     { name: "Granos" },
@@ -8,7 +8,7 @@ router.get("/categories", (req, res) => {
   ]);
 });
 
-router.get("/categories/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   const{id}=req.params
   //Parámetro 1 es la ruta, el 2 un callback
   res.json([
