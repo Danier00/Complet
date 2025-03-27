@@ -30,5 +30,5 @@ router.get("/categorias/:cateId/products/:prodId", (req, res) => {
   res.json([{ cateId, prodId }]);
 });
 
-module.exports = productsRouter;
+module.exports = router;
 

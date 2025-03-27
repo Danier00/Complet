@@ -1,4 +1,7 @@
-app.get("/usuarios/:id", (req, res) => {
+const express = require("express"); //Requiriendo express
+const {router} = express.Router();
+
+app.get("/users/:id", (req, res) => {
   const {id}=req.params
   //Parámetro 1 es la ruta, el 2 un callback
   res.json([
@@ -6,7 +9,7 @@ app.get("/usuarios/:id", (req, res) => {
   ]);
 });
 
-app.get("/usuarios", (req, res) => {
+app.get("/users", (req, res) => {
   const {limit,offset}=req.query
   //Parámetro 1 es la ruta, el 2 un callback
 
@@ -18,3 +21,5 @@ app.get("/usuarios", (req, res) => {
     res.send('No hay parametros')
   }
 });
+
+module.exports = router;
